@@ -45,4 +45,5 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     implementation("androidx.core:core-splashscreen:1.0.1")
+    implementation("com.github.shuhart:stepview:1.5.1")
 }

@@ -4,7 +4,22 @@
     <string name="enter_password">Enter password</string>
     <string name="login">Login</string>
     <string name="submit">Submit</string>
-    <string name="go_to_sign_up">Tap here to create an account 🚀</string>
+    <string name="go_to_sign_up">Tap here to create account using email</string>
     <string name="or">or</string>
     <string name="google_login">Login with Google</string>
+    <string name="app_logo">App logo</string>
+    <string name="next">Next</string>
+    <string name="go_to_login">Already have an account? Tap here</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="sign_up">Sign up</string>
+
+    <string-array name="steps">
+        <item>Email</item>
+        <item>Verify OTP</item>
+        <item>Password</item>
+    </string-array>
 </resources>
