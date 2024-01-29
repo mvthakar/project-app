@@ -41,10 +41,10 @@
         app:shapeAppearanceOverlay="@style/DefaultButton" />
 
     <TextView
-        android:text="We have sent an OTP to your email address which is valid for 5 minutes."
+        android:text="@string/please_check_your_email"
         android:textSize="18sp"
         android:gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

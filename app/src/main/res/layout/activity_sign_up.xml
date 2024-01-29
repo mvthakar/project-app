@@ -42,11 +42,13 @@
             android:layout_height="wrap_content"/>
 
         <androidx.fragment.app.FragmentContainerView
-            android:layout_marginTop="20dp"
             android:id="@+id/fragmentContainer"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:name="my.project.signup.Step1EmailFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/signup_nav"
             tools:layout="@layout/fragment_step3_password" />
 
     </LinearLayout>

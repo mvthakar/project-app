@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/signup_nav"
+    app:startDestination="@id/step1_email">
+
+    <fragment
+        android:id="@+id/step1_email"
+        android:name="my.project.signup.Step1EmailFragment">
+        <action
+            android:id="@+id/action_signup_nav_step1"
+            app:destination="@id/step2_otp" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/step2_otp"
+        android:name="my.project.signup.Step2OtpFragment">
+        <action
+            android:id="@+id/action_signup_nav_step2"
+            app:destination="@id/step3_password" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/step3_password"
+        android:name="my.project.signup.Step3PasswordFragment" />
+
+</navigation>
