@@ -19,6 +19,7 @@ import my.project.api.base.ApiError
 import my.project.api.base.Urls
 import my.project.api.login.LoginRequest
 import my.project.api.login.LoginResponse
+import my.project.state.Prefs
 
 class LoginActivity : AppCompatActivity()
 {
@@ -34,6 +35,8 @@ class LoginActivity : AppCompatActivity()
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        Prefs.load(this)
 
         etEmail = findViewById(R.id.etEmail)
         etPassword = findViewById(R.id.etPassword)
@@ -94,15 +97,20 @@ class LoginActivity : AppCompatActivity()
         try
         {
             val request = LoginRequest(etEmail.text.toString(), etPassword.text.toString())
-            val response = Api.post(Urls.LOGIN, request, LoginResponse::class.java)
+            val response = Api.post(
+                Urls.LOGIN,
+                request,
+                LoginResponse::class.java,
+                refreshTokensIfNecessary = false
+            )
 
             withContext(Dispatchers.Main) {
-                val prefs = this@LoginActivity.getSharedPreferences("tokens", MODE_PRIVATE)
-                val editor = prefs.edit()
-                editor.putString("accessToken", response.accessToken)
-                editor.putString("refreshToken", response.refreshToken)
-                editor.putString("clientId", response.clientId)
-                editor.apply()
+
+                Prefs.saveTokens(
+                    response.accessToken,
+                    response.refreshToken,
+                    response.clientId
+                )
 
                 btnLogin.visibility = View.VISIBLE
                 prgLogin.visibility = View.GONE
@@ -117,7 +125,7 @@ class LoginActivity : AppCompatActivity()
                 btnLogin.visibility = View.VISIBLE
                 prgLogin.visibility = View.GONE
 
-                Snackbar.make(etEmail, e.messages.get(0), Snackbar.LENGTH_LONG).show()
+                Snackbar.make(etEmail, e.messages?.get(0) ?: "[Blank]", Snackbar.LENGTH_LONG).show()
             }
         }
     }

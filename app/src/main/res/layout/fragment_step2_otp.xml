@@ -21,6 +21,24 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/please_check_your_email"
+        android:textSize="18sp" />
+
+    <ProgressBar
+        android:id="@+id/prgVerifyOrResendOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:indeterminateTint="@color/primary_light"
+        android:visibility="gone" />
+
     <Button
         android:id="@+id/btnVerifyOtp"
         android:layout_width="match_parent"
@@ -33,19 +51,11 @@
     <Button
         android:id="@+id/btnResendOtp"
         style="?attr/borderlessButtonStyle"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_marginTop="10dp"
         android:text="@string/resend_otp"
         android:textSize="17sp"
         app:shapeAppearanceOverlay="@style/DefaultButton" />
-
-    <TextView
-        android:text="@string/please_check_your_email"
-        android:textSize="18sp"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
 </LinearLayout>

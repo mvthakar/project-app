@@ -9,6 +9,7 @@ import com.shuhart.stepview.StepView
 
 class SignUpActivity : AppCompatActivity()
 {
+    var signUpEmail: String? = null
     private lateinit var stepView: StepView
 
     override fun onCreate(savedInstanceState: Bundle?)
