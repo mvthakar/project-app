@@ -17,6 +17,8 @@
     <string name="confirm_password">Confirm password</string>
     <string name="sign_up">Sign up</string>
     <string name="please_check_your_email">Please check your email</string>
+    <string name="view_profile">View Profile</string>
+    <string name="project_logo">Project logo</string>
 
     <string-array name="steps">
         <item>Email</item>

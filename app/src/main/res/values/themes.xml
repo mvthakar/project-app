@@ -20,7 +20,7 @@
     <style name="Theme.Project.SplashScreen"
         parent="Theme.SplashScreen">
 
-        <item name="windowSplashScreenAnimatedIcon">@drawable/icon_new</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/icon</item>
         <item name="windowSplashScreenAnimationDuration">500</item>
         <item name="postSplashScreenTheme">@style/Theme.Project</item>
 
@@ -29,6 +29,10 @@
     <!-- Button styles -->
     <style name="DefaultButton">
         <item name="cornerSize">5dp</item>
+    </style>
+
+    <style name="ProfileButton" parent="Widget.Material3.Button">
+        <item name="cornerRadius">100dp</item>
     </style>
 
 </resources>

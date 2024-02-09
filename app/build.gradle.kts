@@ -50,4 +50,5 @@ dependencies {
 
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("com.github.shuhart:stepview:1.5.1")
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 }
